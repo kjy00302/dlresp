@@ -71,7 +71,7 @@ int main(int argc, char* argv[]) {
 void dump_png(void* gfxram, uint32_t addr, uint32_t width, uint32_t height, FILE *f) {
     png_structp png = png_create_write_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
     png_infop info = png_create_info_struct(png);
-    png_bytep row_pointer = malloc(800 * 3);
+    png_bytep row_pointer = malloc(width * 3);
     png_init_io(png, f);
     png_set_IHDR(
         png, info,
