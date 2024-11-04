@@ -6,13 +6,13 @@ DUMPSCREEN_SRC = dumpscreen.c
 
 .PHONY: all clean
 
-all: displaylink-responder displaylink-dumpscreen
+all: dlresp dlresp-dumpscreen
 
-displaylink-responder: $(RESPONDER_SRC:%.c=src/%.c)
+dlresp: $(RESPONDER_SRC:%.c=src/%.c)
 	$(CC) $(CFLAGS) -pthread $^ -o $@
 
-displaylink-dumpscreen: $(DUMPSCREEN_SRC:%.c=src/%.c)
+dlresp-dumpscreen: $(DUMPSCREEN_SRC:%.c=src/%.c)
 	$(CC) $(CFLAGS) -lpng $^ -o $@
 
 clean:
-	rm displaylink-dumpscreen displaylink-responder
+	rm dlresp-dumpscreen dlresp

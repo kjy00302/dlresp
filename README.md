@@ -1,4 +1,4 @@
-# displaylink-responder
+# dlresp (displaylink responder)
 
 Tested on Raspberry Pi Zero W with Windows 11 host.
 
@@ -10,8 +10,8 @@ Packet decryption is not implemented, but latest Windows driver sends unencrypte
 
 ## Usage
 
-    ./displaylink-responder <FFSPATH> <EDIDFILE>
-    ./displaylink-dumpscreen [OUTFILEPATH]
+    ./dlresp <FFSPATH> <EDIDFILE>
+    ./dlresp-dumpscreen [OUTFILEPATH]
 
 ## Resources
 

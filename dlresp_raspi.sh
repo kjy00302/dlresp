@@ -35,7 +35,7 @@ ln -s functions/ffs.dlresp configs/c.1/.
 popd
 mkdir -p /dev/ffs-dlresp
 mount -t functionfs dlresp /dev/ffs-dlresp
-./displaylink-responder /dev/ffs-dlresp $1 &
+./dlresp /dev/ffs-dlresp $1 &
 
 ls /sys/class/udc | sudo tee /sys/kernel/config/usb_gadget/g0/UDC
 
